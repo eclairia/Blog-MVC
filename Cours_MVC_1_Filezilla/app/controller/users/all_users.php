@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	//Appel du modèle pour obtenir le nombre d'utilisateurs
 	//include_once('app/model/users/lire_nb_users.php');
 	//$nb_users = lire_nb_users();

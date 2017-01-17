@@ -1,3 +1,4 @@
+<?php if(!defined("_BASE_URL")) die("Ressource interdite"); ?>
 <div class="container-fluid footer">
 	
 	<h2>Ceci est le footer</h2>

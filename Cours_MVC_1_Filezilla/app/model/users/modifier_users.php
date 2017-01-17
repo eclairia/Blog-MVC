@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	function modifier_users($user_login, $user_pass, $user_email, $display_name, $user_id)
 	{
 		global $pdo;

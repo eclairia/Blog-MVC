@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	/*
 		Fonction lire_commentaires dans le modèle
 		Permet d'afficher les commentaires liés à l'article

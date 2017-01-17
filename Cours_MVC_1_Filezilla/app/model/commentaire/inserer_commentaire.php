@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	function inserer_commentaire($commentaire, $user_id)
 	{
 		global $pdo;

@@ -1,24 +1,11 @@
 <?php
+	define("_BASE_URL", true);
 
-	//On récupère l'adresse IP du client en prévoyant le cas du proxy
-	$ip = !empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
-	//On fabrique une chaine avec l'IP et le type de navigateur
-	$securite = $ip . '_' . $_SERVER['HTTP_USER_AGENT'];
-	//S'il n'y a pas de session en cours 
-	session_start();
-	if(empty($_SESSION))
+	include_once('lib/securite_session_start.php');
+	if(!securite_session_start())
 	{
-		//On ouvvre la session et on enregistre la chaine de sécurité
-		$_SESSION['securite']= $securite;
-	}
-
-	else if($_SESSION['securite'] != $securite)
-	{
-		//On régénère la session et on efface tout le contenu
-		session_regenerate_id();
-		$_SESSION = array();
-	}
-
+		die("Tentative de corruption de la session !");
+	}	
 	include_once('app/model/pdo.inc.php');
 	include_once('app/config/config.inc.php');
 	include_once('core/coremodel.php');

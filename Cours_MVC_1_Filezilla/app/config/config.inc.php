@@ -1,5 +1,7 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
+	
 	define("PAGE_LANG", "fr");
 	define("PAGE_CHARSET", "utf-8");
 
@@ -13,3 +15,6 @@
 	define("USER_LAMBDA", 0);
 
 	define("SALT", "gt5zfgty7qg!yegh8");
+
+	//Constante qui définit l'environnement
+	define("ENV", "DEV");

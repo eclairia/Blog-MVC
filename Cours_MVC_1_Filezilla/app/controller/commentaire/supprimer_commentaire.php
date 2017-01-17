@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	$retour = deletetable("blog_comments",
 						array(
 								"idcolumn" => "comment_ID",

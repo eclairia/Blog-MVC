@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	function lire_articles($offset, $limite)
 	{
 		global $pdo;
@@ -31,6 +32,6 @@
 
 		catch(Exception $e)
 		{
-			die('Erreur SQL: ' . $e->getMessage());
+			erreur($e);
 		}
 	}

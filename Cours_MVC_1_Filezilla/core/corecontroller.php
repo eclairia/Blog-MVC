@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	function location($module, $action, $get="")
 	{
 			$url = "Location:?module=". $module . "&action=" . $action;
@@ -32,5 +33,18 @@
 		{
 			//header("Location:?module=". $module . "&action=" . $action . "&notif=admin");
 			location($module, $action, "&notif=admin");
+		}
+	}
+
+	function erreur($e)
+	{
+		if(ENV == "DEV")
+		{
+			die('Erreur technique: ' . $e->getMessage());
+		}
+
+		else
+		{
+			die("Erreur technique !");
 		}
 	}

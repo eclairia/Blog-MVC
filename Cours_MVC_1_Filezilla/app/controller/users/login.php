@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	/*if(isset($_SESSION["user"]))
 	{
 		header("Location:?module=article&action=admin");
@@ -15,7 +16,7 @@
 	else
 	{
 		//var_dump($_POST);
-
+		//Mot de passe avec une clé de salage haché en md5
 		$_POST["user_password"] = md5($_POST["user_password"] . SALT);
 
 		//Appel du modèle pour chercher un user

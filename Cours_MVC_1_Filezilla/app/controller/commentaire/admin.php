@@ -1,5 +1,6 @@
 <?php
-
+	
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	protection("user", "user", "login", USER_ADMIN);
 
 	//Appel du modèle pour obtenir la liste des utilsateurs

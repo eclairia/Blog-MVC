@@ -1,3 +1,4 @@
+<?php if(!defined("_BASE_URL")) die("Ressource interdite"); ?>
 <?php include_once("app/view/layout/header.inc.php"); ?>
 
 	<form method="POST" action="?module=users&action=login" id="form_login">

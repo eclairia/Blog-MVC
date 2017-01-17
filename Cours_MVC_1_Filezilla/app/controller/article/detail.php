@@ -1,5 +1,6 @@
 <?php
-
+	
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	//Controller pour l'action detail
 
 	if(isset($_GET['id']))

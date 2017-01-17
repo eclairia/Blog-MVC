@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	//Traitement des paramètres
 	if(!isset($_GET['page']))
 	{

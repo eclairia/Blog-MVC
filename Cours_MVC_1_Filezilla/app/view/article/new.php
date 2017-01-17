@@ -1,3 +1,4 @@
+<?php if(!defined("_BASE_URL")) die("Ressource interdite"); ?>
 <?php include("app/view/layout/header.inc.php") ?>
 
   <form id="form_post" method="post" action="?module=article&action=new">

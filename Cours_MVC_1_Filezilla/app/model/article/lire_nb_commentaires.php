@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	function lire_nb_commentaires($id)
 	{
 		global $pdo;

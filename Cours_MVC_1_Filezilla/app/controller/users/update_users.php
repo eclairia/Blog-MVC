@@ -1,5 +1,6 @@
 <?php
 
+	if(!defined("_BASE_URL")) die("Ressource interdite");
 	protection("user", "users", "login", USER_LAMBDA);
 
 	if(empty($_POST))

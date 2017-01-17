@@ -1,3 +1,4 @@
+<?php if(!defined("_BASE_URL")) die("Ressource interdite"); ?>
 <?php include("app/view/layout/header.inc.php"); ?>
 
 	<h1 class="container">Liste des commentaires</h1>
@@ -24,21 +25,20 @@
 	<?php } ?>
 
 	<?php 
-
 		foreach($commentaires as $commentaire)
-		{ ?>
-			<div class="container bgcolor">
-				<p>ID du commentaire: <?php echo $commentaire["comment_ID"]; ?></p>
-				<p>ID du post: <?php echo $commentaire["comment_post_ID"]; ?></p>
-				<p>ID auteur: <?php echo $commentaire["comment_author"]; ?></p>	
-				<p>Date: <?php echo $commentaire["comment_date"]; ?></p>
-				<p>Contenu: <?php echo $commentaire["comment_content"]; ?></p>
-				<a href="?module=commentaire&action=supprimer_commentaire&page=<?= $page ?>&id=<?= $commentaire['comment_ID']; ?>" onclick=" return confirm('Etes-vous certain de vous certain de vouloir supprimer le message ?')">Supprimer le commentaire</a>
-			</div>
-
-		<?php } 
-
-	?>
+		{ 
+			if($commentaire[0])
+			{ ?>
+				<div class="container bgcolor">
+					<p>ID du commentaire: <?php echo $commentaire["comment_ID"]; ?></p>
+					<p>ID du post: <?php echo $commentaire["comment_post_ID"]; ?></p>
+					<p>ID auteur: <?php echo $commentaire["comment_author"]; ?></p>	
+					<p>Date: <?php echo $commentaire["comment_date"]; ?></p>
+					<p>Contenu: <?php echo $commentaire["comment_content"]; ?></p>
+					<a href="?module=commentaire&action=supprimer_commentaire&page=<?= $page ?>&id=<?= $commentaire['comment_ID']; ?>" onclick=" return confirm('Etes-vous certain de vous certain de vouloir supprimer le message ?')">Supprimer le commentaire</a>
+				</div>
+			<?php } ?>
+		<?php } ?>
 
 	<?php 
 

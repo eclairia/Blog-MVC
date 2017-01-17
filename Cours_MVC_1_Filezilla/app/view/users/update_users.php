@@ -1,3 +1,4 @@
+<?php if(!defined("_BASE_URL")) die("Ressource interdite"); ?>
 <?php include("app/view/layout/header.inc.php"); ?>
 
 	<div class="container-fluid form_insert_user">
