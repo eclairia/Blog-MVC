@@ -29,4 +29,6 @@
 			<?php } ?>
 	</div>
 
+	<?php paginate($nb_users, PAGINATION_USERS, 'users', 'all_users'); ?>
+
 <?php include("app/view/layout/footer.inc.php"); ?>
